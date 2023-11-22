@@ -3,7 +3,7 @@ const uint8_t PIN_INPUT = 26;
 
 /*constants*/
 const uint16_t ADC_MAX = 4095;
-const float VCC = 3.3;
+const float VREF = 3.3f;
 
 void setup()
 {
@@ -14,8 +14,8 @@ void setup()
 
 void loop()
 {
-  int input = analogRrad(PIN_INPUT);
-  float tensao = static_cast<float>(input) * VCC / ADC_MAX;
+  uint16_t input = analogRead(PIN_INPUT);
+  float tensao = input * VREF / ADC_MAX;
 
   //Serial.write(); printa caracter
   //Serial.print(tensao); printa o valor junto
