@@ -25,27 +25,7 @@ void loop(){
 
   Serial.println(voltage);
 
-  if(voltage >= 1 && voltage < 2)
-  {
-    digitalWrite(PIN_LED[0], HIGH);
-    digitalWrite(PIN_LED[1], LOW);
-    digitalWrite(PIN_LED[2], LOW);
-  }
-  else if(voltage >= 2 && voltage < 3)
-  {
-    digitalWrite(PIN_LED[0], HIGH);
-    digitalWrite(PIN_LED[1], HIGH);
-    digitalWrite(PIN_LED[2], LOW);
-  }
-  else if(voltage >= 3)
-  {
-    digitalWrite(PIN_LED[0], HIGH);
-    digitalWrite(PIN_LED[1], HIGH);
-    digitalWrite(PIN_LED[2], HIGH);
-  } else
-  {
-    digitalWrite(PIN_LED[0], LOW);
-    digitalWrite(PIN_LED[1], LOW);
-    digitalWrite(PIN_LED[2], LOW);
-  }
-}
+  digitalWrite(PIN_LED[0], voltage >= 1);
+  digitalWrite(PIN_LED[1], voltage >= 2);
+  digitalWrite(PIN_LED[2], voltage >= 3);
+ 
