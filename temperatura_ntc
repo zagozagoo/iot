@@ -78,7 +78,7 @@ void loop()
   //equacao da reta:
   float temperature = NTC_10K_trmp[index] + (resistence -NTC_10K_trmp[index]) * (NTC_10K_trmp[index] - NTC_10K_trmp[index - 1]) / (NTC_10K_trmp[index] - NTC_10K_trmp[index - 1]);
 
-  Serial.printf("ADC: %8i Voltage: %8.2f Resistence: %8.2f Resistence: %8.2f Temperature %8.2f", input_value, voltage, resistence, temperature)
+  Serial.printf("ADC: %8i Voltage: %8.2f Resistence: %8.2f Resistence: %8.2f Temperature %8.2f", input_value, voltage, resistence, temperature);
   delay(2000);
 }
 
