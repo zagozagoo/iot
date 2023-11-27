@@ -7,8 +7,6 @@ void setup()
 
     WiFi.mode(WIFI_STA);
     WiFi.disconnect(); //garante que a esp nao ta conectada em outro wifi
-
-    WiFi.begin("ssid", "senhas");
 }
 
 void loop()
