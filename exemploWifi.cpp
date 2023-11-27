@@ -5,13 +5,15 @@ void setup()
 {
     Serial.begin(115200);
 
-    Wifi.mode(WIFI_STA);
-    Wifi.disconnect(); //garante que a esp nao ta conectada em outro wifi
+    WiFi.mode(WIFI_STA);
+    WiFi.disconnect(); //garante que a esp nao ta conectada em outro wifi
+
+    WiFi.begin("ssid", "senhas");
 }
 
 void loop()
 {
-    int qtde_wifi = Wifi.scanNetworks();
+    int qtde_wifi = WiFi.scanNetworks();
 
     if(qtde_wifi == 0) //caso nao tenha nenhum wifi ele nao faz nada
     {
@@ -23,11 +25,11 @@ void loop()
         Serial.print("Indice: ");
         Serial.print(i + 1);
         Serial.print(" SSID: ");
-        Serial.print(Wifi.SSID(i));  //Nome da rede
+        Serial.print(WiFi.SSID(i));  //Nome da rede
         Serial.print(" RSSI: ");
-        Serial.print(Wifi.RSSI(i)); //intensidade do sinal
+        Serial.print(WiFi.RSSI(i)); //intensidade do sinal
         Serial.print(" Auth: ");
-        Serial.print(Wifi.encryptionType(i));
+        Serial.print(WiFi.encryptionType(i));
         Serial.println;
 
     }
