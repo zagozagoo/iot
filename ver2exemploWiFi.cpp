@@ -35,7 +35,7 @@ bool connectWiFi(const char* ssid, const char* pw)
     
     Serial.println(Conectando com o IP: );
 
-    sERIAL.PRINTLN(WiFi.localIP());
+    Serial.println(WiFi.localIP());
 }
 
 void setup()
@@ -46,5 +46,5 @@ void setup()
 
 void loop()
 {
-    delay(5000);
+    Realtime Database
 }
