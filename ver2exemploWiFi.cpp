@@ -4,6 +4,9 @@
 const char* WIFI_SSID = "nomedarede";
 const char* WIFI_PW = "senha";
 
+const char* = FB_HOST = "https://iotzago-default-rtdb.firebaseio.com/"
+const char* FB_KEY = "DQf3mxx66s9voQFO3AKqIRpmeB2cH7qm01PBU3X6" //firebase
+
 bool connectWiFi(const char* ssid, const char* pw)
 {
     WiFi.mode(WIFI_STA);
