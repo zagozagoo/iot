@@ -15,11 +15,11 @@ void loop()
 
     if(qtde_wifi == 0) //caso nao tenha nenhum wifi ele nao faz nada
     {
-            return;
+        return;
     }
-    for (int i = 0; i i < qtde_wifi; i++)
+    for (int i = 0; i < qtde_wifi; i++)
     {
-        Serial.printf("Quantidade de redes disponiveis:  %i \n", qtde_wifi)
+        Serial.printf("Quantidade de redes disponiveis:  %i \n", qtde_wifi);
         Serial.print("Indice: ");
         Serial.print(i + 1);
         Serial.print(" SSID: ");
@@ -28,7 +28,7 @@ void loop()
         Serial.print(WiFi.RSSI(i)); //intensidade do sinal
         Serial.print(" Auth: ");
         Serial.print(WiFi.encryptionType(i));
-        Serial.println;
+        Serial.println();
 
     }
 
