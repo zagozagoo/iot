@@ -46,7 +46,7 @@ luminosity_mean = np.mean(luminosity[~np.isnan(luminosity)]) #mean eh pra ter a 
 temp_sensor_00_mean = np.mean(temp_sensor_00[~np.isnan(temp_sensor_00)])
 temp_sensor_01_mean = np.mean(temp_sensor_01[~np.isnan(temp_sensor_01)])
     
-fig, axs = plt.subplots(3, figsize=(16, 9), gridspec_kw={"hspace": 0.4}) #grispec: espacamento entre cada grafico
+fig, axs = plt.subplots(3, figsize=(16, 9), gridspec_kw={"hspace": 0.4})  #grispec: espacamento entre cada grafico; subplot faz quantos graficos(no caso 3) quiser em uma imagem
 fig.supxlabel("Tempo")
 ax_luminosity, ax_temp_sensor_00, ax_temp_sensor_01 = axs
 
