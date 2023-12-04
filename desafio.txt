@@ -1,0 +1,32 @@
+## Desafio
+
+  Ler a temperatura e humidade de um sensor DHT11.
+
+  Conectar-se ao Firebase RTDB.
+  Enviar a cada 30 segundos os dados de temperatura e humidade para o banco de dados da turma com a seguinte estrutura:
+
+	challenge02
+	├───subsys_??
+	│   ├───temperature
+	│   └───humidity
+	.
+	.
+	.
+
+  Conectar-se ao Broker MQTT.
+  Quando o Broker enviar o código `100` no tópico `iiot-dta/check`, todos os clients deverão publicar a mensagem `1` nesse mesmo tópico.
+  Quando o Broker enviar o código `200` no tópico `iiot-dta/check`, todos os clients deverão acender um LED por 5 segundos.
+  Quando o Broker enviar o código `100` no tópico `iiot-dta/request`, todos os clients deverão enviar os dados de temperatura e humidade imediatamente.
+
+  Caso a temperatura seja maior que 30 oC, o client deverá publicar o código `10` no tópico `iiot-dta/request`.
+
+  Criar uma dashboard em Python para plotar em tempo real os valores médio, mínimo e máximo da temperatura e da humidade (dois subplots).
+
+
+## Recomendações e lembretes
+
+  Deixar um projeto vazio com todas as bibliotecas já instaladas e compiladas, de forma que não seja necessário recompilar ao iniciar um novo projeto/avaliação.
+
+  Para enviar e receber dados do Firebase a partir dos computadores da Bosch, é necessário utilizar uma rede móvel (roteador do celular) conectada na VPN pelo Cisco AnyConnect.
+
+  Para enviar e receber dados através do protocolo MQTT a partir dos computadores da Bosch, é necessário utilizar uma rede móvel (roteador do celular) porém NÃO SE DEVE CONECTAR NA VPN.
